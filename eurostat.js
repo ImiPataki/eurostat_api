@@ -8,18 +8,21 @@ In the back-end the function below creates the table from the dimensions without
 */
 
 
-function rec(lists, output, original_lists_length){
-   for(var n of lists[0]){
-
+function rec(lists, output, original_lists_length)
+{
+   for(var n of lists[0])
+   {
      output[original_lists_length - lists.length] = n;
    
-     if(lists.slice(1).length > 0){
+     if(lists.slice(1).length > 0)
+     {
         rec(lists.slice(1), output, original_lists_length);
-     }else{
+     }
+     else
+     {
         result.push(output.slice());
      }
    }
- 
 }
 
 var data = 'response from Eurostat API';
