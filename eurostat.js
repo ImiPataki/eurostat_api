@@ -4,7 +4,7 @@ The Eurostat uses JSONstat format https://json-stat.org/format/#value
 The https://cdn.jsdelivr.net/npm/jsonstat@latest/json-stat.js library can be used on the front end to create a table.
 e.g.: var j = JSONstat('http://ec.europa.eu/eurostat/wdds/rest/data/v2.1/json/en/une_rt_m?precision=1&sex=F&sex=M&sex=T&lastTimePeriod=12&unit=PC_ACT&unit=THS_PER&s_adj=SA&age=TOTAL');
 j.toTable()
-In the back-end the function below creates the table without the values.
+In the back-end the function below creates the table from the dimensions without the values.
 */
 
 
