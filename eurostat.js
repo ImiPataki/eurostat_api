@@ -8,15 +8,15 @@ In the back-end the function below creates the table from the dimensions without
 */
 
 
-function rec(lists, output, original_lists_length)
+function rec(dimensions, output, original_dimensions_length)
 {
-   for(var n of lists[0])
+   for(var n of dimensions[0])
    {
-     output[original_lists_length - lists.length] = n;
+     output[original_dimensions_length - dimensions.length] = n;
    
-     if(lists.slice(1).length > 0)
+     if(dimensions.slice(1).length > 0)
      {
-        rec(lists.slice(1), output, original_lists_length);
+        rec(dimensions.slice(1), output, original_dimensions_length);
      }
      else
      {
@@ -27,10 +27,10 @@ function rec(lists, output, original_lists_length)
 
 var data = 'response from Eurostat API';
 
-var lists = Object.values(data.dimension).map(x=> Object.values(x.category.label));
+var dimensions = Object.values(data.dimension).map(x=> Object.values(x.category.label));
 var result = [];
-var blank_array = new Array(lists.length).fill(0)
+var blank_array = new Array(dimensions.length).fill(0)
 
-rec(lists, blank_array, lists.length);
+rec(dimensions, blank_array, dimensions.length);
 
 console.log(result);
