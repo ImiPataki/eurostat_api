@@ -22,7 +22,9 @@ function rec(lists, output, original_lists_length){
  
 }
 
-var lists = Object.values(dat.dimension).map(x=> Object.values(x.category.label));
+var data = 'response from Eurostat API';
+
+var lists = Object.values(data.dimension).map(x=> Object.values(x.category.label));
 var result = [];
 var blank_array = new Array(lists.length).fill(0)
 
